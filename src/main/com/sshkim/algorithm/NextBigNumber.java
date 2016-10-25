@@ -52,7 +52,7 @@ public class NextBigNumber {
         return sb;
     }
 
-    public static void main(String[] args) {
+    public static void main(Practice1[] args) {
         NextBigNumber test = new NextBigNumber();
         int n = 78;
         System.out.println("BigNumber => " + test.nextBigNumber(n));
