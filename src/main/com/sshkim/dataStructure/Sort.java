@@ -10,10 +10,11 @@ public class Sort {
     private int[] result;
 
     public static void main(String[] args) {
-        int[] index = {8, 4, 7, 3, 1, 6, 5, 2};
+//        int[] index = {8, 4, 7, 3, 1, 6, 5, 2};
+        int[] index = {8, 4, 1, 3, 7, 9, 6, 5, 2};
 
         Sort sort = new Sort();
-        int[] result = sort.insertionSort(index);
+        int[] result = sort.quickSort(index);
 
         for (int i : result) {
             System.out.println(i);
@@ -28,9 +29,9 @@ public class Sort {
         for (int i = 1; i < length; i++) {
             number = numbers[i];
             for (j = i - 1; j >= 0 && (number < numbers[j]); j--) {
-                numbers[j+1] = numbers[j];
+                numbers[j + 1] = numbers[j];
             }
-            numbers[j+1] = number;
+            numbers[j + 1] = number;
         }
 
         return numbers;
@@ -72,8 +73,48 @@ public class Sort {
     }
 
     public int[] quickSort(int[] numbers) {
-        result = new int[numbers.length - 1];
-        return result;
+
+        if (numbers.length <= 1 || numbers == null) return numbers;
+
+        quickSort(numbers, 0, numbers.length - 1);
+
+        return numbers;
+    }
+
+    private void quickSort(int[] numbers, int left, int right) {
+
+        if (left >= right) return;
+
+        int i = left;
+        int j = right;
+
+        int middle = left + (right - left) / 2;
+        int pivot = numbers[middle];
+
+        while (i <= j) {
+            while (pivot > numbers[i]) {
+                i++;
+            }
+
+            while (pivot < numbers[j]) {
+                j--;
+            }
+
+            if (i <= j) {
+                int temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+                i++;
+                j--;
+            }
+        }
+
+        if (j > left)
+            quickSort(numbers, left, j);
+
+        if (i < right)
+            quickSort(numbers, i, right);
+
     }
 
     public int[] shellSort(int[] numbers) {
