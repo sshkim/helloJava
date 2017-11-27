@@ -1,4 +1,4 @@
-package main.com.sshkim.algorithm;
+package main.com.sshkim.dataStructure;
 
 /**
  * Created by sshkim on 2016. 10. 21..
@@ -17,6 +17,6 @@ public class Combination {
     }
 
     private static int getCombination(int n, int r) {
-        return Permutation.permutation(n, r) / Factorial.factorial(r);
+        return Permutation.permutationCount(n, r) / Factorial.factorial(r);
     }
 }

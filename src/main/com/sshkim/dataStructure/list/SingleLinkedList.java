@@ -1,4 +1,4 @@
-package main.com.sshkim.dataStructure.linkedList;
+package main.com.sshkim.dataStructure.list;
 
 import main.com.sshkim.dataStructure.Node;
 

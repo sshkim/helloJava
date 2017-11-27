@@ -7,22 +7,7 @@ package main.com.sshkim.dataStructure;
 // TODO > 정렬 알고리즘
 public class Sort {
 
-    private int[] result;
-
-    public static void main(String[] args) {
-//        int[] index = {8, 4, 7, 3, 1, 6, 5, 2};
-        int[] index = {8, 4, 1, 3, 7, 9, 6, 5, 2};
-
-        Sort sort = new Sort();
-        int[] result = sort.quickSort(index);
-
-        for (int i : result) {
-            System.out.println(i);
-        }
-
-    }
-
-    public int[] insertionSort(int[] numbers) {
+    public static int[] insertionSort(int[] numbers) {
         int length = numbers.length;
         int number = 0;
         int j;
@@ -37,7 +22,7 @@ public class Sort {
         return numbers;
     }
 
-    public int[] bubbleSort(int[] numbers) {
+    public static int[] bubbleSort(int[] numbers) {
         int length = numbers.length;
         int tmp = 0;
         for (int j = 0; j < length; j = 0) {
@@ -54,7 +39,7 @@ public class Sort {
         return numbers;
     }
 
-    public int[] selectionSort(int[] numbers) {
+    public static int[] selectionSort(int[] numbers) {
         int length = numbers.length;
 
         for (int j = 0; j < length; j++) {
@@ -72,7 +57,7 @@ public class Sort {
         return numbers;
     }
 
-    public int[] quickSort(int[] numbers) {
+    public static int[] quickSort(int[] numbers) {
 
         if (numbers.length <= 1 || numbers == null) return numbers;
 
@@ -81,7 +66,7 @@ public class Sort {
         return numbers;
     }
 
-    private void quickSort(int[] numbers, int left, int right) {
+    private static void quickSort(int[] numbers, int left, int right) {
 
         if (left >= right) return;
 
@@ -117,22 +102,22 @@ public class Sort {
 
     }
 
-    public int[] shellSort(int[] numbers) {
+    public static int[] shellSort(int[] numbers) {
         return numbers;
     }
 
-    public int[] mergeSort(int[] numbers) {
-        result = new int[numbers.length - 1];
+    public static int[] mergeSort(int[] numbers) {
+        int[] result = new int[numbers.length - 1];
         return result;
     }
 
-    public int[] rxSort(int[] numbers) {
-        result = new int[numbers.length - 1];
+    public static int[] rxSort(int[] numbers) {
+        int[] result = new int[numbers.length - 1];
         return result;
     }
 
-    public int[] heapSort(int[] numbers) {
-        result = new int[numbers.length - 1];
+    public static int[] heapSort(int[] numbers) {
+        int[] result = new int[numbers.length - 1];
         return result;
     }
 

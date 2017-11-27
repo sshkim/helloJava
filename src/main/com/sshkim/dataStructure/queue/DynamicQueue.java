@@ -6,7 +6,6 @@ import java.util.NoSuchElementException;
  * Created by sshkim on 2016. 12. 7..
  */
 
-//TODO
 public class DynamicQueue {
 
     private int[] queueArr;

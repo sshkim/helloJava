@@ -1,6 +1,6 @@
 package test.dataStructure.LinkedList;
 
-import main.com.sshkim.dataStructure.linkedList.DoubleLinkedList;
+import main.com.sshkim.dataStructure.list.DoubleLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 

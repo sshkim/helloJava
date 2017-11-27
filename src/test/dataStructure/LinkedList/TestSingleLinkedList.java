@@ -1,7 +1,7 @@
 package test.dataStructure.LinkedList;
 
 import main.com.sshkim.dataStructure.Node;
-import main.com.sshkim.dataStructure.linkedList.SingleLinkedList;
+import main.com.sshkim.dataStructure.list.SingleLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 

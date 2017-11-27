@@ -1,4 +1,4 @@
-package main.com.sshkim.algorithm;
+package main.com.sshkim.dataStructure;
 
 /**
  * Created by sshkim on 2016. 10. 21..
